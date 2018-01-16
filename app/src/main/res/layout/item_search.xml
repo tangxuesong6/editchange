@@ -24,6 +24,7 @@
         android:layout_width="45dp"
         android:layout_height="45dp" />
     <TextView
+        android:textColor="#7f44ff"
         android:gravity="center"
         android:text="123"
         android:id="@+id/tv_text"
