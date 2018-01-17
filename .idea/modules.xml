@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/editchange.iml" filepath="$PROJECT_DIR$/editchange.iml" />
       <module fileurl="file://$PROJECT_DIR$/partchange/partchange.iml" filepath="$PROJECT_DIR$/partchange/partchange.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testinndexof/testinndexof.iml" filepath="$PROJECT_DIR$/testinndexof/testinndexof.iml" />
     </modules>
   </component>
 </project>

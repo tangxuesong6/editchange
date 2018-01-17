@@ -1,1 +1,1 @@
-include ':app', ':partchange'
+include ':app', ':partchange', ':testinndexof'
