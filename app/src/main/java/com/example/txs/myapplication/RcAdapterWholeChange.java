@@ -38,12 +38,14 @@ public class RcAdapterWholeChange extends RecyclerView.Adapter<RcAdapterWholeCha
      * 需要改变颜色的text
      */
     private String text;
+    /**
+     * 属性动画
+     */
+    private Animator animator;
 
     /**
      * 在MainActivity中设置text
      */
-    private Animator animator;
-
     public void setText(String text) {
         this.text = text;
     }
@@ -70,7 +72,8 @@ public class RcAdapterWholeChange extends RecyclerView.Adapter<RcAdapterWholeCha
         } else {
             holder.mTvText.setText(list.get(position));
         }
-        animator = AnimatorInflater.loadAnimator(context,R.animator.anim_set);
+        //属性动画
+        animator = AnimatorInflater.loadAnimator(context, R.animator.anim_set);
         animator.setTarget(holder.mLlItem);
         animator.start();
         //点击监听
