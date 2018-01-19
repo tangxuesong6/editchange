@@ -9,6 +9,8 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -162,5 +164,7 @@ public class MainActivityPart extends AppCompatActivity {
         mRcSearch = (RecyclerView) findViewById(R.id.rc_search);
         //Recyclerview的配置
         mRcSearch.setLayoutManager(new LinearLayoutManager(this));
+        LayoutAnimationController layoutAnimationController = AnimationUtils.loadLayoutAnimation(this,R.anim.layout_animation);
+        mRcSearch.setLayoutAnimation(layoutAnimationController);
     }
 }
