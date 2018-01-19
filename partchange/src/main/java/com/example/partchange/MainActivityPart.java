@@ -155,6 +155,8 @@ public class MainActivityPart extends AppCompatActivity {
             mRcSearch.setAdapter(adapter);
         } else {
             adapter.notifyDataSetChanged();
+            //刷新数据时的动画
+            mRcSearch.scheduleLayoutAnimation();
         }
     }
 
@@ -164,6 +166,7 @@ public class MainActivityPart extends AppCompatActivity {
         mRcSearch = (RecyclerView) findViewById(R.id.rc_search);
         //Recyclerview的配置
         mRcSearch.setLayoutManager(new LinearLayoutManager(this));
+        //动画
         LayoutAnimationController layoutAnimationController = AnimationUtils.loadLayoutAnimation(this,R.anim.layout_animation);
         mRcSearch.setLayoutAnimation(layoutAnimationController);
     }
