@@ -1,5 +1,7 @@
 package com.example.txs.myapplication;
 
+import android.animation.Animator;
+import android.animation.AnimatorInflater;
 import android.content.Context;
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
@@ -40,6 +42,8 @@ public class RcAdapterWholeChange extends RecyclerView.Adapter<RcAdapterWholeCha
     /**
      * 在MainActivity中设置text
      */
+    private Animator animator;
+
     public void setText(String text) {
         this.text = text;
     }
@@ -47,6 +51,7 @@ public class RcAdapterWholeChange extends RecyclerView.Adapter<RcAdapterWholeCha
     public RcAdapterWholeChange(Context context, List<String> list) {
         this.context = context;
         this.list = list;
+
     }
 
     @Override
@@ -65,6 +70,9 @@ public class RcAdapterWholeChange extends RecyclerView.Adapter<RcAdapterWholeCha
         } else {
             holder.mTvText.setText(list.get(position));
         }
+        animator = AnimatorInflater.loadAnimator(context,R.animator.anim_set);
+        animator.setTarget(holder.mLlItem);
+        animator.start();
         //点击监听
         holder.mLlItem.setOnClickListener(new View.OnClickListener() {
             @Override
